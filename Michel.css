@@ -1,0 +1,132 @@
+body
+{
+	width: 100%;
+	margin-left: 12%;
+	margin-right: 12%;
+	width: 80%;	
+}
+/* Body: représene le corps principal de la page, "margin" délimite sa position (ses bordures externes), width définit l'épaisseur/la largeur du corps principal*/
+
+footer /*Donne des propriétés au bas de page*/
+{
+	background-color: #7FFFD4;/*Donne une couleur de fond au footer*/
+	border:1px solid black ;/*Une bordure noire continue*/
+	text-align: center;/*Aligne les textes à l'intèrieur au milieu*/
+}
+h1
+{
+	color: red;
+	font-family: Segoe Script;
+	text-align: center;
+	font-size: 45;
+}
+/* h1 permet de définir un texte: sa couleur, sa position, sa police, la tailel de sa police et bien d'autres choses. */
+h2
+{
+	color: red; 
+	font-family: cursive;
+	text-align: left;
+	font-size: 26px;	
+}
+h3
+{
+	font-family: cursive;
+	font-size:23px;
+	text-decoration:underline;
+	
+}
+p
+{
+	margin-left:0;
+	margin-right:10%;
+	margin-bottom: 80px;
+	font-size: 21;
+	font-family:cursive;
+	padding: 1px;
+	color: black;
+}
+/* Tout comme h1, h2 et h3, p définit un texte, mais est généralement plus utilisé pour de longs paragraphes tandis que h1,2,3 définit(généralement) des titres. "Margin", dans cette situation permet de mettre un certain espace entre le texte et le corps. */
+h4
+{
+	margin-left: 0;/*Donne l'espace entre l'exterieur de la boite de texte et le body. */
+	font-size: 20;/* Donne la taille de la police */
+	color: black;/* La couleur de la police */
+	margin-bottom: 10px;/* L'espace entre le bas du texte et l'élément suivant */
+	font-family:cursive;/* La police d'écriture */
+	text-align: center;/* Centre le texte au milieu */
+}
+.BARRE/* Définit notre barre de navigation latérale */
+{
+	position: fixed;/*Fait en sorte que l'élément ne bouge pas avec le reste de la page et garde la même position*/
+	margin:auto ;/* Définit les bordures exterieures */
+	top: 0px;/*Permet de coller la barre au haut de la page (la barre serait détachée du haut de la page si top>0px*/
+	left:0px ;/* Permet de coller la barre à la gauche de la page  */
+	width:10%;/* La largeur de la barre en fonction de celle de la page */
+	background-color: silver;/* La couleur de fond de la barre */
+	height: 100%;/* Permet d'étendre la barre du haut jusqu'au bas de la page (sa hauteur donc) */
+	border: 2px solid black;/* Donne à la barre des bordures de 2px, continues et noires */
+}
+
+.BARRE a /* Donne les propriétés au liens de la barre de navigation latérale */
+{
+	display: block;/*Fait que les liens soient des blocs solides adjacents les uns aux autres ne  se mélangeant pas*/
+	color: blue;/* La couleur de la police des liens */
+	padding: 13px;/* L'épaisseur des bordures internes du bloc */
+	text-align: left;/* Aligne le texte des blocs à gauche */
+	font-size: 18; /* La taille du texte des blocs */
+	font-family: impact;/* Sa police d'écriture */
+	border-bottom: 1px solid black;/* Crée des bords visibles, continus et noirs aux bas des blocs */
+}
+#Jacques /* Caractéristiques particulières d'une image */
+{	
+	margin-right:20px;/* Laisse un espace entre l'image et le texte */
+	float: left;/*Colle l'image à la gauche du body */
+	width: 300px;/* Lui donne une largeur fixe ( et donc une taille fixe, car l'image s'ajuste d'elle même) */
+}	
+#Jean
+{
+	margin-right: 40px;/* Place un espace entre l'image et le body*/
+	float: right;/*Colle l'image à la droite du body*/
+}
+
+#Romeo /*Boîte présente dans la page 3 pour comparer les enjeux du cloud*/
+{	width:44%;/*Fait que Romeo (ainsi que Juliette fassent chacun à peu près la moitié du body*/
+	float:left; /*Garde Romeo à gauche pour pouvoir coller les 2 boîtes*/
+	border: 3px double black;/*Donne une bordure à la boîte*/
+	margin-left: 4%;/*Décalage de Romeo vers la droite par rapport au body*/
+	height:auto;
+	background-color: gray;
+}
+
+#Juliette
+{
+	width:44%;
+	float: right;/*Câle vers la droite la boîte*/
+	border: 3px double black;
+	margin-bottom: auto;
+	margin-right: 4%;
+	height: auto;
+	background-color: gray;
+}
+@media screen and (max-width: 950px) { /*Permet d'ajuster des paramètres en fonction de la taille de la fenêtre de la page internet (dans ce cas là lorsque la largeur de la fenêtre fait moins de 950px)*/
+  .BARRE /*Changements effectués sur la barre de navigation lorsque la largeur de la fenêtre est infèrieure à 950px */
+  {
+	  width: 100%;/*Définit la barre sur toute la largeur de la page  */
+	  height: 50px;/* Donne une hauteur définie à la barre */
+	  }
+
+  .BARRE a /*Changements effectués sur les blocs de liens de la même barre*/
+  {
+	  float: left;/*Fait s'agencer correctement les blocs entre eux en les impbriquants les uns à la droite de l'autre */
+	  border-bottom: 0px;/* Redéfinit les bordures du bas des blocs comme nulles*/
+	  border-right: 1px solid black;/*Ajoute une bordure solide noire à la droite des blocs */
+	  }
+  body/*Changements effectués sur le body dans la condition spécifiée précedemment */
+  {
+	  margin-top:50px;/*Met une distance entre les éléments du body et la barre afin qu'elles n'entrent pas en collision */
+	  margin-left: 30px;/*Redéfinit la taille de la fenêtre pour un meilleur espace désormais plus monopolisé par la barre */
+	  }
+  p
+  {
+	  font-size: 18;/*Redéfinit la taille de police des paragraphes pour une meilleure visibilité*/
+	  }
